@@ -47,21 +47,15 @@ table {
 	border-spacing: 0;
 }
 /*Our Rules*/
-#whiteHeader{
-    overflow: hidden;
+#logo{
+    position: relative;
+    top: 3px;
+}
+header{
     width: 100%;
     margin: 0 auto;
     background-color:#FFF;
-}
-.wOpen{
-    height: 13.5rem;
-}
-#logo{
-    float: left;
-}
-.logopen{
-    position: relative;
-    top: 6.5rem;
+    border-bottom: 1.5rem solid #A1B6BA;
 }
 body
 {
@@ -72,11 +66,8 @@ body
 	width: 100%;
 	margin: 0 auto;
 }
-
 #content
 {
-    padding-top: 3.5rem;
-    clear: both;    
 	width: 80%;
 	margin: 0 auto;
 	background-color: white;
@@ -89,47 +80,48 @@ footer{
 }
 nav
 {  
-    position: relative;
+    margin: 0 auto;
+    z-index: 1000;
     top: 2rem;
+    position: relative;
     background-color: #FFF;
-    float: right;
-	width: 75%;
+	width: 60%;
 }
-.accordion-item-div ul li{
-    display: list-item;
-}
-.accordion-li{
-    width: 15%;
+nav ul{
+    text-align: center;
     margin: 0 auto;
 }
-.accordion-item{
-    padding-left: 0.5rem;
-    border-left: 1px solid grey;
-}
-.accordion-item-div li{
-    width: auto;
-}
-.accordion-item-div li{
-    list-style-position: inside;
-    list-style-image: url(images/arrows.gif);
-}
 .accordion-li{
+    position: relative;
+    display: inline-block;
+    width: 17%;
+    margin: 0 auto;
     line-height: 1.5rem;
     color: black;
-	display: inline-block;
 }
-.accordion-item-div{
-    max-width: 0rem;
-    max-height: 0rem;
-	overflow: hidden;
-	transition:max-height 2s;
+.accordion-li a{
+    padding: 0.25rem 3rem 0.25rem 1rem;
+    border-left: 1px solid #DC2911;
 }
-.open{
-    max-width: 7rem;
-	max-height: 60rem;
-	transition:max-height 2s;
+.accordion-item {
+    list-style: url(images/arrows.gif);
+    display: none;
+    overflow: visible;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0.5rem 1.5rem;
+    z-index: 1;
+}
+.accordion-item a{
+    border: none;
 }
 
+.accordion-li:hover .accordion-item {
+    display: block;
+    z-index: 100000;
+}
 nav li a,.fixed-nav ul li a{
     font-family: 'Arimo', sans-serif;
     color: #344147;
@@ -139,24 +131,29 @@ nav li a,.fixed-nav ul li a{
 nav li a:hover{
     background-color: #EEF3F5;
 }
+#nav-ul{
+    text-align: center;
+    float: right;
+}
+#nav-icon{
+    padding: 0.5rem 0 0 0.5rem;
+    float: left;
+}
 .fixed-nav{
+    vertical-align: middle;
+    z-index: 1000;
     overflow: hidden;
-    padding: 1.25rem 0 0 0;
-    top: 6.125rem;
-    height: 2.25rem;
-    width: 100%;
+    height: 3.5rem;
     background-color: #A1B6BA;
     position: absolute;
 }
-.fxd-nav-open{
-    top:12.5rem;
-}
-.fixed-div{
+.scrolling{ 
     top:0;
     position: fixed;
 }
 .fixed-nav ul{
-    width: 100%;
+    padding-top: 1.25rem;
+    width: 95%;
     text-align: center;
 }
 .fixed-nav ul li{
@@ -193,7 +190,7 @@ nav li a:hover{
     margin: 0 auto;
     text-align: center;
 }
-.text-parallax blockquote{
+blockquote{
     font-size: 1.5rem;
 }
 aside{
@@ -216,14 +213,23 @@ h1{
 h2{
     font-size: 2rem;
 }
+h3{
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+}
 h1, h2{
-    margin: 1rem auto;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
     width: 75%;
     padding: 0.675rem 0.5rem 0.675rem 0.5rem;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     color: #344147;
-    border-bottom: 1px solid #41ACBF;
+    border-bottom: 1px solid #DC2911;
+}
+.authors-h2{
+    border: none;
+    width: 30%;
 }
 .parallax h2{
     font-weight: bold;
@@ -232,18 +238,13 @@ h1, h2{
     color: white;
     border: none;
 }
-h3{
-    font-size: 1.75rem;
-    padding-bottom: 1rem;
-}
 #textbtwnparallax{
     width: 700px;
-    background-color: white;
     color: darkgrey;
     font-family: 'Courgette', cursive;
     text-align: center;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 4.5rem 0 1.5rem 0;
 }
 #textbtwnparallax blockquote, .text-parallax blockquote{
     line-height: 1.5rem;
@@ -306,7 +307,7 @@ aside ul li a:hover{
 #Will-div{
     float: right;
 }
-#Ale-div, #Will-div p{
+#Ale-div p, #Will-div p{
     margin: 1rem auto;
     font-size: 0.95rem;
     line-height: 1.5rem;
