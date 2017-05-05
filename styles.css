@@ -46,17 +46,68 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*Our Rules*/
-#logo{
-    position: relative;
-    top: 3px;
-}
+/*Our Rules
+
+Header-----------------------------------------
+*/
 header{
     width: 100%;
     margin: 0 auto;
     background-color:#FFF;
     border-bottom: 1.5rem solid #A1B6BA;
 }
+#logo{
+    position: relative;
+    top: 0.1875rem;
+}
+nav
+{  
+    margin: 0 auto;
+    top: 2rem;
+    position: relative;
+    background-color: #FFF;
+	width: 60%;
+}
+.top-navigation-bar{
+    text-align: center;
+    margin: 0 auto;
+}
+.top-navigation-item{
+    position: relative;
+    display: inline-block;
+    width: 17%;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    color: black;
+}
+.top-navigation-item a{
+    padding: 0.25rem 2.5314% 0.25rem 11.61877%;
+    border-left: 1px solid #DC2911;
+}
+.top-navigation-ul {
+    text-align: left;
+    list-style: url(images/arrows.gif);
+    display: none;
+    overflow: visible;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0.5rem 17.4281611%;
+    z-index: 1;
+}
+.top-navigation-ul a{
+    border: none;
+}
+
+.top-navigation-item:hover .top-navigation-ul {
+    display: block;
+}
+/*
+END------------------------------------
+
+Content sizing
+*/
 body
 {
 	background-color: #E8F0FF;
@@ -72,57 +123,10 @@ body
 	margin: 0 auto;
 	background-color: white;
 }
-footer{
-    overflow: hidden;
-    margin: 0 auto;
-    width: 100%;
-    background-color: #A1B6BA;
-}
-nav
-{  
-    margin: 0 auto;
-    z-index: 1000;
-    top: 2rem;
-    position: relative;
-    background-color: #FFF;
-	width: 60%;
-}
-nav ul{
-    text-align: center;
-    margin: 0 auto;
-}
-.accordion-li{
-    position: relative;
-    display: inline-block;
-    width: 17%;
-    margin: 0 auto;
-    line-height: 1.5rem;
-    color: black;
-}
-.accordion-li a{
-    padding: 0.25rem 3rem 0.25rem 1rem;
-    border-left: 1px solid #DC2911;
-}
-.accordion-item {
-    list-style: url(images/arrows.gif);
-    display: none;
-    overflow: visible;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 0.5rem 1.5rem;
-    z-index: 1;
-}
-.accordion-item a{
-    border: none;
-}
+/*
 
-.accordion-li:hover .accordion-item {
-    display: block;
-    z-index: 100000;
-}
-nav li a,.fixed-nav ul li a{
+Navigations hyperlinks css*/
+nav ul li a, .fixed-navigation-bar ul li a{
     font-family: 'Arimo', sans-serif;
     color: #344147;
     text-decoration: none;
@@ -131,15 +135,21 @@ nav li a,.fixed-nav ul li a{
 nav li a:hover{
     background-color: #EEF3F5;
 }
-#nav-ul{
+/*
+END----------------------------------
+
+Sticky navigation bar
+*/
+#fixed-navigation-ul{
     text-align: center;
     float: right;
 }
-#nav-icon{
+#fixed-navigation-bar-icon{
+    width: 3%;
     padding: 0.5rem 0 0 0.5rem;
     float: left;
 }
-.fixed-nav{
+.fixed-navigation-bar{
     vertical-align: middle;
     z-index: 1000;
     overflow: hidden;
@@ -151,24 +161,26 @@ nav li a:hover{
     top:0;
     position: fixed;
 }
-.fixed-nav ul{
+#fixed-navigation-ul{
     padding-top: 1.25rem;
     width: 95%;
-    text-align: center;
 }
-.fixed-nav ul li{
+#fixed-navigation-ul li{
     display: inline;
 }
-.fixed-nav ul li a{
-    padding: 1rem 2rem 1rem 2rem;
+#fixed-navigation-ul li a{
+    padding: 1rem 3.1187235%;
     text-transform: uppercase;
 }
-.fixed-nav ul li a:hover{
-    color: aliceblue;
+#fixed-navigation-ul li a:hover{
     background-color: #344147
 }
+/*
+END----------------------------------------
+
+Content
+*/
 .wrapper{
-    width: 100%;
     background-color: white;
     padding-bottom: 2rem;
 }
@@ -179,8 +191,7 @@ nav li a:hover{
     display: flex;
     align-items: center;
     background-color: black;
-    height: 600px;
-    width: 100%;
+    height: 37.5rem;
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -192,17 +203,6 @@ nav li a:hover{
 }
 blockquote{
     font-size: 1.5rem;
-}
-aside{
-    width: 80%;
-    margin: 0 auto;
-}
-.inline-divs{
-    float: left;
-    width: 23%;
-}
-.inline-divs-content{
-    margin: 0 auto;
 }
 #parallax-image{
     background-image: url(images/parallax_image_index.jpg); /*Parallax scrolling*/
@@ -221,7 +221,7 @@ h1, h2{
     margin: 0 auto;
     margin-bottom: 1.5rem;
     width: 75%;
-    padding: 0.675rem 0.5rem 0.675rem 0.5rem;
+    padding: 0.675rem 0.74069%;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     color: #344147;
@@ -239,7 +239,7 @@ h1, h2{
     border: none;
 }
 #textbtwnparallax{
-    width: 700px;
+    width: 64.819%;
     color: darkgrey;
     font-family: 'Courgette', cursive;
     text-align: center;
@@ -254,29 +254,50 @@ h1, h2{
 #textbtwnparallax blockquote{
     font-size: 1.125rem;
 }
-#share-buttons{
+/*
+Footer
+
+*/
+footer{
+    overflow: hidden;
     margin: 0 auto;
-    padding: 0 0.5rem 1rem 0.5rem;
+    width: 100%;
+    background-color: #A1B6BA;
+}
+aside{
+    width: 80%;
+    margin: 0 auto;
 }
 aside p{
     height: auto;
-    padding: 0.5rem;
+    padding: 0.5rem 0.74069%;
     line-height: 1.5;
     font-size: 1.25rem;
     font-family:'Istok Web', sans-serif;;
     color: white;
     text-transform: uppercase;
 }
+aside ul li a:hover{
+    color: white;
+}
+#share-buttons{
+    margin: 0 auto;
+    padding: 0 3.2204% 1rem 3.2204%;
+}
+.inline-divs{
+    float: left;
+    width: 23%;
+}
+.inline-divs-content{
+    margin: 0 auto;
+}
 .inline-divs ul li a{
-    padding-left: 0.75rem;
+    padding-left: 4.8306%;
     line-height: 1.5;
     font-size: 1rem;
     font-family: 'Istok Web', sans-serif;
     color: #344147;
     text-decoration: none;
-}
-aside ul li a:hover{
-    color: white;
 }
 .author{
     font-family:'Istok Web', sans-serif;;
@@ -299,7 +320,7 @@ aside ul li a:hover{
 #Ale-div, #Will-div{
     text-align: center;
     display: block;
-    padding-left: 2rem;
+    padding-left: 2.96278%;
     margin: 0 auto;
     width: 45%;
     float: left;
@@ -317,4 +338,15 @@ aside ul li a:hover{
     overflow: hidden;
     width: 100%;
     background-color: white;
+}
+/*
+Media Queries
+*/
+@media screen and (max-width:768px){
+h1{
+    font-size: 1.90rem;
+}
+h2{
+    font-size:1.5rem;
+}
 }
