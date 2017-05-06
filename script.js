@@ -3,7 +3,7 @@ $('.carousel').slick();
 var num = 768.59; //number of pixels before modifying styles
 var scroll = false;
 document.onscroll = function() {
-    if( $(window).scrollTop() > num ) {
+    if( $(window).scrollTop() > num && $(window).width() > 480) {
         $('.fixed-navigation-bar').addClass('scrolling');
     }
     else {
@@ -11,3 +11,37 @@ document.onscroll = function() {
     }
 };
 
+
+var accordion = document.getElementById("accordion");
+
+var sectionHeaders = accordion.getElementsByTagName("img");
+
+for(var i = 0;i<sectionHeaders.length;i++){
+
+	sectionHeaders[i].addEventListener("click", function(e){
+		var thisHeading = e.target;
+		var thisHeadingSection = thisHeading.nextElementSibling;
+		if(thisHeadingSection.className == "open"){
+			thisHeadingSection.className = "";
+		}else{
+			thisHeadingSection.className = "open";
+		}
+	})
+}
+
+var accordion2 = document.getElementById("fixed-accordion");
+
+var sectionHeaders2 = accordion2.getElementsByTagName("img");
+
+for(var i = 0;i<sectionHeaders2.length;i++){
+
+	sectionHeaders2[i].addEventListener("click", function(e){
+		var thisHeading = e.target;
+		var thisHeadingSection = thisHeading.nextElementSibling;
+		if(thisHeadingSection.className == "open2"){
+			thisHeadingSection.className = "";
+		}else{
+			thisHeadingSection.className = "open2";
+		}
+	})
+}

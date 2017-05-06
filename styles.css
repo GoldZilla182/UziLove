@@ -50,6 +50,9 @@ table {
 
 Header-----------------------------------------
 */
+#menu{
+    display: none;
+}
 header{
     width: 100%;
     margin: 0 auto;
@@ -62,6 +65,7 @@ header{
 }
 nav
 {  
+    z-index: 1000;
     margin: 0 auto;
     top: 2rem;
     position: relative;
@@ -140,22 +144,26 @@ END----------------------------------
 
 Sticky navigation bar
 */
+#fixed-menu-icon{
+    display: none;
+    margin: 0 auto;
+    padding-right: 6.66%;
+}
+.fixed-navigation-bar{
+    width: 80%;
+    vertical-align: middle;
+    z-index: 1000;
+    background-color: #A1B6BA;
+    position: absolute;
+}
 #fixed-navigation-ul{
     text-align: center;
     float: right;
 }
 #fixed-navigation-bar-icon{
     width: 3%;
-    padding: 0.5rem 0 0 0.5rem;
+    padding: 0.25rem;
     float: left;
-}
-.fixed-navigation-bar{
-    vertical-align: middle;
-    z-index: 1000;
-    overflow: hidden;
-    height: 3.5rem;
-    background-color: #A1B6BA;
-    position: absolute;
 }
 .scrolling{ 
     top:0;
@@ -166,14 +174,15 @@ Sticky navigation bar
     width: 95%;
 }
 #fixed-navigation-ul li{
+    padding: 1.15rem 0 0.875rem 0;
     display: inline;
 }
 #fixed-navigation-ul li a{
-    padding: 1rem 3.1187235%;
+    padding: 1.2rem 3.1187235% 0.95rem 3.1187235%;
     text-transform: uppercase;
 }
 #fixed-navigation-ul li a:hover{
-    background-color: #344147
+    background-color: #344147;
 }
 /*
 END----------------------------------------
@@ -264,18 +273,20 @@ footer{
     width: 100%;
     background-color: #A1B6BA;
 }
-aside{
+footer aside{
     width: 80%;
     margin: 0 auto;
 }
-aside p{
-    height: auto;
+footer aside a, p{
+    text-decoration: none;
     padding: 0.5rem 0.74069%;
     line-height: 1.5;
     font-size: 1.25rem;
     font-family:'Istok Web', sans-serif;;
     color: white;
-    text-transform: uppercase;
+}
+aside a:hover{
+    color: #758587;
 }
 aside ul li a:hover{
     color: white;
@@ -299,6 +310,11 @@ aside ul li a:hover{
     color: #344147;
     text-decoration: none;
 }
+/*
+END
+
+About the author
+*/
 .author{
     font-family:'Istok Web', sans-serif;;
     padding-top:0.5rem;
@@ -342,11 +358,174 @@ aside ul li a:hover{
 /*
 Media Queries
 */
-@media screen and (max-width:768px){
+@media screen and (max-width: 48.63rem){    /*Ipad and tablets*/
 h1{
     font-size: 1.90rem;
 }
 h2{
-    font-size:1.5rem;
+    font-size: 1.5rem;
+}
+.parallax h2{
+    font-size: 2.5rem;
+}
+#textbtwnparallax blockquote{
+    font-size: 1rem;
+}
+#textbtwnparallax{
+    width: 85%;
+}
+/*Top Navigation Bar*/
+#menu{
+    display: block;
+}
+#accordion nav{
+	max-height: 0rem;
+	overflow: hidden;
+	transition:max-height 0.5s;
+}
+
+#accordion .open {
+	max-height: 60rem;
+	transition:max-height 1s;
+}
+nav
+{  
+    top: 0rem;
+	width: 100%;
+}
+.top-navigation-bar{
+    text-align: center;
+    margin: 0 auto;
+}
+.top-navigation-item{
+    width: 100%;
+}
+.top-navigation-ul {
+    display: none;
+}
+.top-navigation-item a{
+    text-transform: uppercase;
+    padding: 0.25rem 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.top-navigation-item:hover .top-navigation-ul {
+    display: none;
+}
+}
+@media screen and (max-width: 480px){     /*Phones*/
+ #content, footer {
+    width:95%;
+ }
+ aside{
+    width: 100%;
+    clear: both;
+ }
+ /*
+ Fixed navigation bar -> static
+ */
+ #fixed-menu-icon{
+     padding-right: 0;
+ }
+ .fixed-navigation-bar{
+    width: 100%;
+    position: static;
+ }
+#fixed-navigation-ul{
+    background-color: #A1B6BA;
+    width: 100%;
+    padding-top: 0;
+    float:left;
+}
+#fixed-navigation-ul li{
+    width: 100%; 
+    display: block;
+    padding: 0.5rem 0;
+    border-top: 1px solid white;
+}
+ #fixed-navigation-ul li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+}
+#fixed-navigation-bar-icon{
+    display: none;
+}   
+#textbtwnparallax{
+    width: 85%;
+    padding: 0.5rem 0 1.5rem 0;
+}
+}
+@media screen and (max-width: 42.5rem)
+{
+footer
+{
+    clear: both;
+}
+.inline-divs{
+    text-align: center;
+    width: 100%;
+}
+.inline-divs ul{
+    display: none;
+}
+#share-buttons{
+    margin: 0 auto;
+    padding: 0 ;
+}
+#share-buttons p{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+footer aside a{
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid white;
+}
+footer aside a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+#share-buttons-div{
+    width: 40%;
+    margin: 0 auto;
+}
+#share-buttons a{
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    width: 20%;
+    margin: 0 auto;
+    border: none;
+}
+#share-buttons a{
+    background-color: transparent;
+}
+}
+
+@media screen and (max-width: 950px){     /*fixed navbar*/
+#fixed-menu-icon{
+    display: block;
+}
+#fixed-accordion ul{
+    width: 100%;
+    padding: 0;
+	max-height: 0rem;
+	overflow: hidden;
+	transition:max-height 0.5s;
+}
+
+#fixed-accordion .open2 {
+	max-height: 60rem;
+	transition:max-height 1s;
+}
+#fixed-navigation-ul li{
+    width: 100%; 
+    display: block;
+    padding: 0.5rem 0;
+    border-top: 1px solid white;
 }
 }
