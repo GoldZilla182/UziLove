@@ -444,12 +444,7 @@ nav
     padding: 0.5rem 0;
     border-top: 1px solid white;
 }
- #fixed-navigation-ul li a{
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 0.25rem 0;
-}
+
 #fixed-navigation-bar-icon{
     display: none;
 }   
@@ -528,4 +523,11 @@ footer aside a:hover{
     padding: 0.5rem 0;
     border-top: 1px solid white;
 }
+#fixed-navigation-ul li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+}
+
 }
