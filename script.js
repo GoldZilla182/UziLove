@@ -1,4 +1,20 @@
-$('.carousel').slick();
+$('.carousel').slick({
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+      }
+    }
+  ]
+});
+
 
 var num = 768.59; //number of pixels before modifying styles
 var scroll = false;
