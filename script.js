@@ -66,7 +66,7 @@ if(document.getElementById("accordion") != null)
     })
   }
 }
-/*Map Code*/
+/*Map Code, this is code I used for a project for my leaving cert*/
  var array = [
   [22.31056, 114.22278],
   [22.2754, 114.1438],

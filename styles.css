@@ -539,7 +539,7 @@ select: https://codepen.io/ericrasch/pen/zjDBx
    border: none;
    font-size: 14px;
    height: 29px;
-   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   padding: 5px;
    width: 268px;
 }
 select { color: black}
