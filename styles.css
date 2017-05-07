@@ -224,6 +224,11 @@ Content
     color: white;
     text-align: center;
 }
+.centered-form{
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
 .image-with-text .text-images{
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -518,31 +523,23 @@ About the author
     background-color: white;
 }
 input[type=text] {
-    display: inline-block;
-    margin: 0 auto;
-    width: 50%;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 5px;
     box-sizing: border-box;
 }
-
-input[type=submit] {
+input[type=submit]{
+    background-color: #DC2911;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+input[type=submit], input[type=text] {
     width: 50%;
     display: inline-block;
     margin: 0 auto;
-    background-color: #DC2911;
-    display: inline-block;
-    color: white;
     padding: 1rem;
     margin: 1rem;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-
-}
 /*
 END
 
@@ -679,6 +676,14 @@ nav
 }
 }
 @media screen and (max-width: 30rem){     /*Phones*/
+input[type=submit], input[type=text] {
+    width: 90%;
+}
+.centered-form{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
 .text-images h2{
     width: auto;
 }
