@@ -216,6 +216,9 @@ blockquote{
 #parallax-image{
     background-image: url(images/parallax_image_index.jpg); /*Parallax scrolling*/
 }
+#parallax-image-2{
+    background-image: url(images/parallax_image_2.jpg);
+}
 h1{
     font-size: 3rem;
 }
@@ -236,6 +239,7 @@ h1, h2{
     color: #344147;
     border-bottom: 1px solid #DC2911;
 }
+
 .authors-h2{
     border: none;
     width: 30%;
@@ -262,6 +266,20 @@ h1, h2{
 }
 #textbtwnparallax blockquote{
     font-size: 1.125rem;
+}
+#text{
+    padding: 1.25rem;
+    line-height: 1.5;
+    font-family: 'Cabin', sans-serif;
+}
+#text h3{
+    font-family: 'Cabin Condensed', sans-serif;
+}
+img.center{
+    display: block;
+    margin left: auto;
+    margin right: auto;
+    padding: 10px;
 }
 /*
 Footer
