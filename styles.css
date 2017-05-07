@@ -170,7 +170,7 @@ Sticky navigation bar
     position: fixed;
 }
 #fixed-navigation-ul{
-    padding-top: 1.25rem;
+    padding-top: 1.15rem;
     width: 95%;
 }
 #fixed-navigation-ul li{
@@ -178,11 +178,28 @@ Sticky navigation bar
     display: inline;
 }
 #fixed-navigation-ul li a{
-    padding: 1.2rem 3.1187235% 0.95rem 3.1187235%;
+    padding: 1.3rem 3.1187235% 1rem 3.1187235%;
     text-transform: uppercase;
 }
 #fixed-navigation-ul li a:hover{
     background-color: #344147;
+}
+#victoria{
+    width: 100%;
+}
+.picture{
+    width: 100%;
+}
+.picture-big{
+    margin: 0 auto;
+    width: 100%;
+}
+.picture-medium{
+    margin: 0 auto;
+    width: 70%;
+}
+.image-medium{
+    width: 100%;
 }
 /*
 END----------------------------------------
@@ -223,7 +240,21 @@ blockquote{
 #parallax-image-2{
     background-image: url(images/parallax_image_2.jpg);
 }
-<<<<<<< HEAD
+#parallax-image-3{
+    background-image: url(images/parallax_image_3.jpg);
+}
+#parallax-image-4{
+    background-image: url(images/parallax_image_4.jpg);
+}
+iframe{
+    width: 560px;
+    height: 315px;
+    margin: 0 auto;
+    padding:0.5rem 0;
+}
+.video{
+    text-align: center;
+}
 .pic-des-lft-div, .pic-des-rgt-div{
     width: 35%;
     padding: 1rem 0.3812%;
@@ -255,17 +286,13 @@ blockquote{
     margin: 0 auto;
     width: 100%;
 }
-=======
-#parallax-image-3{
-    background-image: url(images/parallax_image_3.jpg);
-}
+
 .parallax-caption{
-    position: absolute;
+    width: max-content;
+    margin: 0 auto;
     text-align: center;
-    
 }
 
->>>>>>> ce210a7108de18995a20a7a4195b6cd2096022f0
 h1{
     font-size: 3rem;
 }
@@ -273,6 +300,11 @@ h2{
     font-size: 2rem;
 }
 h3{
+    padding-top: 1rem;
+    width: max-content;
+    margin: 0 auto;
+    font-family: 'Courgette', cursive;
+    color: #344147;
     font-size: 1.75rem;
     padding-bottom: 1rem;
 }
@@ -286,14 +318,22 @@ h1, h2{
     color: #344147;
     border-bottom: 1px solid #DC2911;
 }
-p, a{
+p, a, figcaption{
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
     font-size:1.1rem;
 }
+figcaption{
+    padding: 0.5rem 0;
+}
 p{
+    width: 80%;
     color: darkgrey;
+}
+.info{
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
 }
 .text-images p{
     color: white;
@@ -327,12 +367,11 @@ a:hover{
 #textbtwnparallax{
     width: 64.819%;
     color: darkgrey;
-    font-family: 'Courgette', cursive;
-    text-align: center;
     margin: 0 auto;
     padding: 4.5rem 0 1.5rem 0;
 }
 #textbtwnparallax blockquote, .text-images blockquote{
+    text-align: center;
     line-height: 1.5rem;
     font-style: italic;
     font-family: 'Raleway', sans-serif;
