@@ -219,6 +219,15 @@ blockquote{
 #parallax-image-2{
     background-image: url(images/parallax_image_2.jpg);
 }
+#parallax-image-3{
+    background-image: url(images/parallax_image_3.jpg);
+}
+.parallax-caption{
+    position: absolute;
+    text-align: center;
+    
+}
+
 h1{
     font-size: 3rem;
 }
