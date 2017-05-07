@@ -20,15 +20,17 @@
         <div id="accordion">
         <img id="menu" src="images/menu_icon.png"  alt="Menu Icon" title="Menu Icon">
         <nav>            
-            <ul class="top-navigation-bar"> <!--https://www.w3schools.com/css/css_dropdowns.asp-->
-                <li class="top-navigation-item"><a href="index.html">Home</a></li>
-                <li class="top-navigation-item"><a href="#">Attractions</a>
+            <ul class="top-navigation-bar">
+                <li class="top-navigation-item"><a href="index.html">Home</a>
+                    
+                </li>
+                <li class="top-navigation-item"><a href="attractions.html">Attractions</a>
                         <ul  class="top-navigation-ul">
-                            <li><a href="#">Disneyland</a></li>
+                            <li><a href="attractions.html#content">Disneyland</a></li>
                             <li><a href="attractions-victoria.html">Victoria Peak</a></li>
                             <li><a href="attractions-food.html">Food</a></li>
                             <li><a href="#">Must See</a></li>
-                            <li><a href="#">Annual Events</a></li>
+                            <li><a href="attractions.html#annual">Annual Events</a></li>
                         </ul>
                 </li>
                 <li class="top-navigation-item"><a href="#">Explore</a>
@@ -41,10 +43,10 @@
                 <li class="top-navigation-item"><a href="history.html">History</a>
                         
                 </li>
-                <li class="top-navigation-item"><a href="about.html">About Us</a>
+                <li class="top-navigation-item"><a href="about-us.html">About Us</a>
                         <ul  class="top-navigation-ul">
                             <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Developers</a></li>
+                            <li><a href="about-us.html">Developers</a></li>
                         </ul>
                 </li>
             </ul>
@@ -91,11 +93,11 @@
     <div class="pic-plus-text" id="food">
         <h2>And to eat</h2>
     <div class="pic-des-lft-div">
-      <div><img src="images/Food1.png" alt="Honk Kong food" title="Honk Kong food"></div>
+      <div class="picture"><img class="picture" src="images/Food1.png" alt="Honk Kong food" title="Honk Kong food"></div>
     </div>
     <div class="pic-des-rgt-div"> <!--http://www.geminiconnect.com/hong-kong-food-guide/-->
       <p>Like most cities in Asia, the food scene in Hong Kong is world renowned. From street food so good that the Michelin Guide made a category just for it to high-end bars and restaurants, food in Hong Kong suits every taste and budget. Given the Western and Eastern influences on Hong Kong, you can find both traditional Asian foods as well as spendy Western options.</p>
-      <a href="#">Read more...</a>
+      <a class="center-link" href="#">Read more...</a>
     </div>
     </div>
     <div id="hotels">
@@ -130,7 +132,7 @@
             </div>
             </div>
             <div class="input-padding">
-            <input type="button" name="btnSubmit" class="btn" id="sub" value="Submit"/>
+            <input type="button" name="btnSubmit" class="btn" id="sub" value="GO!"/>
             </div>
         </form>
         </div>
@@ -138,16 +140,22 @@
         <div id="articles">
         <h2>Best Articles</h2>
         <div class="article" id="first">
+        <div>
+        <h3>Seven reasons to explore Hong Kong Global Geopark right now</h3>
         <p>Twenty years after its return to China, Hong Kong is awakening to the importance of its natural and cultural heritage on a collective scale. And it should. The city is the top in Asia and fifth worldwide in the extent of its area designated for conservation, according to the World Economic Forum's 2015 Travel and Tourism Report. In very few places are urban delights and outdoor pursuits on offer in such close proximity as here.
-        Natural hexagonal columns in ethereal colours at Hong Kong Global Geopark. <em>PIERA CHEN - Lonely Planet Writer</em></p>        
-        <div class="article-photo"><img src="images/geopark.jpg" alt="Hong Kong Global Geopark" title="Hong Kong Global Geopark"></div>
+        Natural hexagonal columns in ethereal colours at Hong Kong Global Geopark. <em>PIERA CHEN - Lonely Planet Writer</em></p>
+        </div>        
+        <div class="article-photo"><img class="picture-medium" src="images/geopark.jpg" alt="Hong Kong Global Geopark" title="Hong Kong Global Geopark"></div>
         </div>
         <div class="article" id="second">
-        <div class="article-photo"><img src="images/kowloon.jpg" alt="Kowloon city image" title="Kowloon city image"></div>
+        <h3>Hong Kong hustle: exploring Kowloon with kids</h3>
+        <div class="article-photo"><img class="picture-medium" src="images/kowloon.jpg" alt="Kowloon city image" title="Kowloon city image"></div>
+        <div>
         <p>
         Kowloon might be loud, crazy and disarmingly brash – but the pulsing heart of Hong Kong is full of delights for younger travellers. Just a leisurely stroll through the bright lights of Nathan Road will have them gawking like star struck Canto-pop fans.
         <em>TOM SPURLING - Lonely Planet Writer</em>
-        </p> 
+        </p>
+        </div> 
         </div>
         <a href="http://www.lonelyplanet.com/china/hong-kong/travel-tips-and-articles">Read More articles</a>
         </div>
@@ -159,36 +167,36 @@
               <div class="inline-divs-content">
               <a href="index.html">Home</a>           
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Discover</a></li>
-                        <li><a href="">Explore</a></li>
-                        <li><a href="">History</a></li>
-                        <li><a href="">Accomodation</a></li>
+                        <li><a href="index.html#content">Home</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#food">Food</a></li>
+                        <li><a href="index.html#hotels">Hotels</a></li>
+                        <li><a href="index.html#articles">Best Articles</a></li>
                     </ul>
                 </div>
           </div>
           <div class="inline-divs">
               <div class="inline-divs-content">
-              <a href="#">Where</a>
+              <a href="attractions.html">Attractions</a>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Discover</a></li>
-                        <li><a href="">Explore</a></li>
-                        <li><a href="">History</a></li>
-                        <li><a href="">Accomodation</a></li>
+                        <li><a href="attractions.html#content">Disneyland</a></li>
+                        <li><a href="attractions-victoria.html">Victoria Peak</a></li>
+                        <li><a href="attractions-food.html">Food</a></li>
+                        <li><a href="#">Must See</a></li>
+                        <li><a href="attractions.html#annual">Annual Events</a></li>
                     </ul>
               </div>
                 </div>
           <div class="inline-divs">
               <div class="inline-divs-content">
-              <a href="about.html">About</a>
+              <a href="#">Explore</a>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Discover</a></li>
-                        <li><a href="">Explore</a></li>
-                        <li><a href="">History</a></li>
-                        <li><a href="">Accomodation</a></li>
+                        <li><a href="explore-maps.html">Maps</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">HK Island</a></li>
                     </ul>
+            <a href="history.html">History</a><br>
+            <a href="about-us.html">About us</a>
                 </div>
           </div>
           <!-- AddToAny BEGIN -->

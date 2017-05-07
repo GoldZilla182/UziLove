@@ -184,23 +184,16 @@ Sticky navigation bar
 #fixed-navigation-ul li a:hover{
     background-color: #344147;
 }
-#victoria{
-    width: 100%;
-}
+
 .picture{
     width: 100%;
 }
-.picture-big{
-    margin: 0 auto;
-    width: 100%;
-}
 .picture-medium{
+    display: block;
     margin: 0 auto;
     width: 70%;
 }
-.image-medium{
-    width: 100%;
-}
+
 /*
 END----------------------------------------
 
@@ -246,8 +239,11 @@ blockquote{
 #parallax-image-4{
     background-image: url(images/parallax_image_4.jpg);
 }
+#parallax-image-5{
+    background-image: url(images/parallax_image_5.jpg);
+}
 iframe{
-    width: 560px;
+    width: 51.28%;
     height: 315px;
     margin: 0 auto;
     padding:0.5rem 0;
@@ -256,7 +252,7 @@ iframe{
     text-align: center;
 }
 .pic-des-lft-div, .pic-des-rgt-div{
-    width: 35%;
+    width: 45%;
     padding: 1rem 0.3812%;
 }
 .pic-plus-text{
@@ -338,6 +334,12 @@ p{
 .text-images p{
     color: white;
 }
+.center-link{
+    padding: 1rem 0;
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+}
 a{
     text-decoration: none;
     color: #344147;
@@ -384,11 +386,16 @@ a:hover{
     line-height: 1.5;
     font-family: 'Cabin', sans-serif;
 }
+#articles {
+clear: both;
+overflow: hidden;
+}
 .article {
 clear: both;
 overflow: hidden;
 }
 #articles a{
+    padding-bottom: 0.75rem;
     display: block;
     width: max-content;
     margin: 0 auto;
@@ -571,6 +578,12 @@ END
 Media Queries
 */
 @media screen and (max-width: 48.63rem){    /*Ipad and tablets*/
+#Ale-div, #Will-div{
+    padding-left: 0;
+    margin: 0 auto;
+    width: 95%;
+    float: none;
+}
 h1{
     font-size: 1.90rem;
 }
@@ -627,6 +640,13 @@ nav
 }
 }
 @media screen and (max-width: 480px){     /*Phones*/
+.parallax-caption h2{
+    font-size: 2rem;
+}
+iframe{
+    width: 100%;
+    margin: 0;
+}
  #content, footer {
     width:95%;
  }
@@ -637,7 +657,7 @@ nav
  /*
  Fixed navigation bar -> static
  */
- #fixed-menu-icon{
+#fixed-menu-icon{
      padding-right: 0;
  }
  .fixed-navigation-bar{
@@ -665,7 +685,7 @@ nav
     padding: 0.5rem 0 1.5rem 0;
 }
 }
-@media screen and (max-width: 42.5rem)
+@media screen and (max-width: 42.5rem)/*Footer collapse*/
 {
 footer
 {
@@ -712,7 +732,6 @@ footer aside a:hover{
     background-color: transparent;
 }
 }
-
 @media screen and (max-width: 950px){     /*fixed navbar*/
 #fixed-menu-icon{
     display: block;
@@ -724,7 +743,6 @@ footer aside a:hover{
 	overflow: hidden;
 	transition:max-height 0.5s;
 }
-
 #fixed-accordion .open2 {
 	max-height: 60rem;
 	transition:max-height 1s;
@@ -742,4 +760,48 @@ footer aside a:hover{
     padding: 0.25rem 0;
 }
 
+}
+
+@media screen and (max-width: 850px){     /*articles collapse*/
+.articles{
+    width: 100%;
+    clear: both;
+}
+.article-photo{
+    width: max-content;
+    display: block;
+    float: none;
+    margin: 0 auto;
+}
+.article h3{
+    width: 90%;
+    font-size: 1.5rem;
+}
+.article p{
+    width: 90%;
+    float: none;
+}
+.article div{
+    width: 95%;
+}
+}
+@media screen and (max-width: 1050px){     /*food collapse*/
+.pic-des-lft-div, .pic-des-rgt-div{
+    width: 100%;
+    float: none;
+}
+.image-with-text{
+    height: auto;
+    background: none;
+}
+.image-with-text .text-images h2{
+    display: none;
+}
+.image-with-text .text-images p, .image-with-text .text-images h2{
+    color: darkgrey;
+}
+.image-with-text .text-images{
+    background-color: transparent;
+    color: black;
+}
 }
