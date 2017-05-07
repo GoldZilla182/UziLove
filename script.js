@@ -66,3 +66,81 @@ if(document.getElementById("accordion") != null)
     })
   }
 }
+/*Map Code, this is code I used for a project for my leaving cert*/
+ var array = [
+  [22.31056, 114.22278],
+  [22.2754, 114.1438],
+  [22.364602, 114.378812],
+  [22.312967, 114.041282]
+];
+        
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: Number(22.31056), lng: Number(114.22278)},
+          zoom: 11
+        });
+          var flightPlanCoordinates = new Array();
+		var i = 0;
+		
+        var k = 0;
+		for(i=0;i<array.length;i++){
+			var myLatLng = {lat: Number(array[i][0]), lng: Number(array[i][1])};
+		
+			flightPlanCoordinates.push(myLatLng);
+			
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: array[i][2]
+			});			
+		}	
+		
+          map.set('styles', [
+ {
+    featureType: 'road',
+    elementType: 'geometry',
+    stylers: [
+      {
+        lightness: 100
+      },
+      {
+        visibility: 'simplified'
+      }
+    ]
+  }, {
+    featureType: 'landscape.man_made',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#9d91a1'
+      }
+    ]
+  }, {
+    featureType: 'landscape.natural',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#70db70'
+      }
+    ]
+  }, {
+    featureType: 'poi.park',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#70db70'
+      }
+    ]
+  }, {
+    featureType: 'water',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#528fe0'
+      }
+    ]
+   
+  }]);
+        flightPath.setMap(map);
+      }

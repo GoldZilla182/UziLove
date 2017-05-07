@@ -203,6 +203,9 @@ Content
     background-color: white;
     padding-bottom: 2rem;
 }
+.wrapper p{
+    padding: 1rem 0;
+}
 .carousel img{
     margin: 0 auto;
 }
@@ -562,7 +565,7 @@ select: https://codepen.io/ericrasch/pen/zjDBx
    border: none;
    font-size: 14px;
    height: 29px;
-   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   padding: 5px;
    width: 268px;
 }
 select { color: black}
@@ -597,6 +600,16 @@ input {
     padding: 7px 5px;
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
     width: 190px;
+}
+/*
+END
+
+Map
+*/
+#map {
+    height: 25rem;
+    width: 80%;
+    margin: 0 auto;
 }
 /*
 END
@@ -665,7 +678,10 @@ nav
     display: none;
 }
 }
-@media screen and (max-width: 480px){     /*Phones*/
+@media screen and (max-width: 30rem){     /*Phones*/
+.text-images h2{
+    width: auto;
+}
 .parallax-caption h2{
     font-size: 2rem;
 }
@@ -679,6 +695,9 @@ iframe{
  aside{
     width: 100%;
     clear: both;
+ }
+ h3{
+     width: auto;
  }
  /*
  Fixed navigation bar -> static
@@ -758,7 +777,7 @@ footer aside a:hover{
     background-color: transparent;
 }
 }
-@media screen and (max-width: 950px){     /*fixed navbar*/
+@media screen and (max-width: 59.38rem){     /*fixed navbar*/
 #fixed-menu-icon{
     display: block;
 }
@@ -788,7 +807,7 @@ footer aside a:hover{
 
 }
 
-@media screen and (max-width: 850px){     /*articles collapse*/
+@media screen and (max-width: 53.13rem){     /*articles collapse*/
 .articles{
     width: 100%;
     clear: both;
@@ -811,7 +830,7 @@ footer aside a:hover{
     width: 95%;
 }
 }
-@media screen and (max-width: 1050px){     /*food collapse*/
+@media screen and (max-width: 65.63rem){     /*food collapse*/
 .pic-des-lft-div, .pic-des-rgt-div{
     width: 100%;
     float: none;
