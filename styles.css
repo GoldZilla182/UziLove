@@ -514,6 +514,32 @@ About the author
     width: 100%;
     background-color: white;
 }
+input[type=text] {
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #DC2911;
+    display: inline-block;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+}
 /*
 END
 
