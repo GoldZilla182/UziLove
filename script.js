@@ -3,13 +3,13 @@ $('.carousel').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+      arrows: false,
       }
     },
     {
       breakpoint: 480,
       settings: {
-        arrows: false,
+      arrows: false,
       }
     }
   ]
@@ -27,37 +27,42 @@ document.onscroll = function() {
     }
 };
 
+if(document.getElementById("accordion") != null)
+  {
+    var accordion = document.getElementById("accordion");
 
-var accordion = document.getElementById("accordion");
+    var sectionHeaders = accordion.getElementsByTagName("img");
 
-var sectionHeaders = accordion.getElementsByTagName("img");
+    for(var i = 0;i<sectionHeaders.length;i++){
 
-for(var i = 0;i<sectionHeaders.length;i++){
+      sectionHeaders[i].addEventListener("click", function(e){
+        var thisHeading = e.target;
+        var thisHeadingSection = thisHeading.nextElementSibling;
+        if(thisHeadingSection.className == "open"){
+          thisHeadingSection.className = "";
+        }else{
+          thisHeadingSection.className = "open";
+        }
+      })
+    }
+  }
 
-	sectionHeaders[i].addEventListener("click", function(e){
-		var thisHeading = e.target;
-		var thisHeadingSection = thisHeading.nextElementSibling;
-		if(thisHeadingSection.className == "open"){
-			thisHeadingSection.className = "";
-		}else{
-			thisHeadingSection.className = "open";
-		}
-	})
-}
+  if(document.getElementById("fixed-accordion") != null)
+  {
+  var accordion2 = document.getElementById("fixed-accordion");
 
-var accordion2 = document.getElementById("fixed-accordion");
+  var sectionHeaders2 = accordion2.getElementsByTagName("img");
 
-var sectionHeaders2 = accordion2.getElementsByTagName("img");
+  for(var i = 0;i<sectionHeaders2.length;i++){
 
-for(var i = 0;i<sectionHeaders2.length;i++){
-
-	sectionHeaders2[i].addEventListener("click", function(e){
-		var thisHeading = e.target;
-		var thisHeadingSection = thisHeading.nextElementSibling;
-		if(thisHeadingSection.className == "open2"){
-			thisHeadingSection.className = "";
-		}else{
-			thisHeadingSection.className = "open2";
-		}
-	})
+    sectionHeaders2[i].addEventListener("click", function(e){
+      var thisHeading = e.target;
+      var thisHeadingSection = thisHeading.nextElementSibling;
+      if(thisHeadingSection.className == "open2"){
+        thisHeadingSection.className = "";
+      }else{
+        thisHeadingSection.className = "open2";
+      }
+    })
+  }
 }

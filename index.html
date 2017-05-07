@@ -20,10 +20,8 @@
         <div id="accordion">
         <img id="menu" src="images/menu_icon.png"  alt="Menu Icon" title="Menu Icon">
         <nav>            
-            <ul class="top-navigation-bar">
-                <li class="top-navigation-item"><a href="index.html">Home</a>
-                    
-                </li>
+            <ul class="top-navigation-bar"> <!--https://www.w3schools.com/css/css_dropdowns.asp-->
+                <li class="top-navigation-item"><a href="index.html">Home</a></li>
                 <li class="top-navigation-item"><a href="#">Attractions</a>
                         <ul  class="top-navigation-ul">
                             <li><a href="#">Disneyland</a></li>
@@ -57,37 +55,101 @@
   <div id="content">
 	<h1>Discover Hong Kong</h1>
       <div class ="parallax" id="parallax-image">
-          <div class="text-parallax">
+          <div class="text-images">
           <h2>The best city in the World</h2>
           <blockquote> - Bruce Lee</blockquote>
           </div>
       </div>
-      <aside class="fixed-navigation-bar">
+      <aside class="fixed-navigation-bar"> <!--http://stackoverflow.com/questions/22541364/sticky-navbar-onscroll-->
         <div id="fixed-navigation-bar-icon">
         <a href="index.html"><img id="hk-icon" src="images/hk_icon.png" alt="Hk" title="Hk"></a>
         </div>
         <div id="fixed-accordion">
         <img id="fixed-menu-icon" src="images/fixed_menu_icon.png" alt="fixed menu icon" title="fixed menu icon">
         <ul id="fixed-navigation-ul">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Attractions</a></li>
-            <li><a href="explore-maps.html">Explore</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="index.html#content">Home</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#food">Food</a></li>
+            <li><a href="index.html#hotels">Hotels</a></li>
+            <li><a href="index.html#articles">Best Articles</a></li>
         </ul>
         </div>
     </aside>
-        <div class="wrapper">
-            <div id="textbtwnparallax"><h3>Why Hong Kong?</h3>
+        <div class="wrapper" id="home-head">
+            <div id="textbtwnparallax"><h3>Why Hong Kong?</h3> <!--Lonely planet citation-->
             <blockquote>“Hong Kong has a complexity that defies definition. It's the only place where I can be searching for colonial military relics near the Chinese border, lunching with a Buddhist at a Sikh temple, ng to decipher the aesthetics of Chinese Revival architecture, or splurging on a set of knives – all within five hours – followed by a night of Cantonese opera, karaoke or poetry, anywhere I choose. Hong Kong is so intense...”</blockquote>
             </div>
         </div>
-    <h2>So much to see</h2>
-    <div class="wrapper">
+    <div class="wrapper" id="gallery">
+        <h2>So much to see...</h2>
         <div class="carousel">
             <div><img src="images/carousel_1.jpg" alt="Honk Kong" title="Honk Kong"></div>
             <div><img src="images/carousel_2.jpg" alt="Honk Kong" title="Honk Kong"></div>
             <div><img src="images/carousel_3.jpg" alt="Honk Kong" title="Honk Kong"></div>
+        </div>
+    </div>
+    <div class="pic-plus-text" id="food">
+        <h2>And to eat</h2>
+    <div class="pic-des-lft-div">
+      <div><img src="images/Food1.png" alt="Honk Kong food" title="Honk Kong food"></div>
+    </div>
+    <div class="pic-des-rgt-div"> <!--http://www.geminiconnect.com/hong-kong-food-guide/-->
+      <p>Like most cities in Asia, the food scene in Hong Kong is world renowned. From street food so good that the Michelin Guide made a category just for it to high-end bars and restaurants, food in Hong Kong suits every taste and budget. Given the Western and Eastern influences on Hong Kong, you can find both traditional Asian foods as well as spendy Western options.</p>
+      <a href="#">Read more...</a>
+    </div>
+    </div>
+    <div id="hotels">
+        <h2>Find your Hotel</h2>
+        <div class="image-with-text">
+        <div class="text-images">
+          <h2>Choose your Hotel</h2>
+          <p>Choose from wide range of hotels with different prices and locations</p>
+        <form name="Hotel Booking">
+            <div class="input-padding">
+            <p>Check in:</p>
+            <input type="date" name="inday">
+            </div>
+            <div class="input-padding">
+            <p>Check out:</p>
+            <input type="date" name="outday">
+            </div>
+            <div class="input-padding">
+            <p>Number of Guests</p>
+            <div class="styled-select slate">
+            <select name="guests" id="guests-numb">
+					<option value="1">1 Guest</option>
+					<option value="2">2 Guest</option>
+					<option value="3">3 Guest</option>
+					<option value="4">4 Guest</option>
+                    <option value="5">5 Guest</option>
+					<option value="6">6 Guest</option>
+					<option value="7">7 Guest</option>
+                    <option value="8">8 Guest</option>
+                    <option value="9">9 Guest</option>
+			</select>
+            </div>
+            </div>
+            <div class="input-padding">
+            <input type="button" name="btnSubmit" class="btn" id="sub" value="Submit"/>
+            </div>
+        </form>
+        </div>
+        </div> 
+        <div id="articles">
+        <h2>Best Articles</h2>
+        <div class="article" id="first">
+        <p>Twenty years after its return to China, Hong Kong is awakening to the importance of its natural and cultural heritage on a collective scale. And it should. The city is the top in Asia and fifth worldwide in the extent of its area designated for conservation, according to the World Economic Forum's 2015 Travel and Tourism Report. In very few places are urban delights and outdoor pursuits on offer in such close proximity as here.
+        Natural hexagonal columns in ethereal colours at Hong Kong Global Geopark. <em>PIERA CHEN - Lonely Planet Writer</em></p>        
+        <div class="article-photo"><img src="images/geopark.jpg" alt="Hong Kong Global Geopark" title="Hong Kong Global Geopark"></div>
+        </div>
+        <div class="article" id="second">
+        <div class="article-photo"><img src="images/kowloon.jpg" alt="Kowloon city image" title="Kowloon city image"></div>
+        <p>
+        Kowloon might be loud, crazy and disarmingly brash – but the pulsing heart of Hong Kong is full of delights for younger travellers. Just a leisurely stroll through the bright lights of Nathan Road will have them gawking like star struck Canto-pop fans.
+        <em>TOM SPURLING - Lonely Planet Writer</em>
+        </p> 
+        </div>
+        <a href="http://www.lonelyplanet.com/china/hong-kong/travel-tips-and-articles">Read More articles</a>
         </div>
     </div>
 </div>

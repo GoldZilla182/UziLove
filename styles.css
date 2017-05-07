@@ -61,7 +61,7 @@ header{
 }
 #logo{
     position: relative;
-    top: 0.1875rem;
+    top: 0.5rem;
 }
 nav
 {  
@@ -205,10 +205,14 @@ Content
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.text-parallax{
-    color: white;
+.text-images{
+    width: 70%;
     margin: 0 auto;
+    color: white;
     text-align: center;
+}
+.image-with-text .text-images{
+    background-color: rgba(0, 0, 0, 0.6);
 }
 blockquote{
     font-size: 1.5rem;
@@ -218,6 +222,37 @@ blockquote{
 }
 #parallax-image-2{
     background-image: url(images/parallax_image_2.jpg);
+}
+.pic-des-lft-div, .pic-des-rgt-div{
+    width: 35%;
+    padding: 1rem 0.3812%;
+}
+.pic-plus-text{
+    width: 80%;
+    margin: 0 auto;
+}
+.pic-des-lft-div{
+    float: left;
+}
+.pic-des-rgt-div{
+    float: right;
+}
+.image-with-text{
+    align-items: center;
+    width: 100%;
+    background-image: url(images/Hong-Kong-Hotel.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 31.25rem;
+}
+.input-padding{
+    padding: 0.75rem 0;
+}
+#hotels{
+    clear: both;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    width: 100%;
 }
 h1{
     font-size: 3rem;
@@ -239,17 +274,43 @@ h1, h2{
     color: #344147;
     border-bottom: 1px solid #DC2911;
 }
-
+p, a{
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    font-size:1.1rem;
+}
+p{
+    color: darkgrey;
+}
+.text-images p{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: #344147;
+}
+a:hover{
+    color: black;
+}
 .authors-h2{
     border: none;
     width: 30%;
 }
 .parallax h2{
+    font-size: 3.25rem;
+}
+.parallax h2, .text-images h2{
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 3.25rem;
     color: white;
     border: none;
+}
+.text-images h2{
+    font-size: 2.5rem;
+}
+#text h3{
+    font-family: 'Cabin Condensed', sans-serif;
 }
 #textbtwnparallax{
     width: 64.819%;
@@ -259,7 +320,7 @@ h1, h2{
     margin: 0 auto;
     padding: 4.5rem 0 1.5rem 0;
 }
-#textbtwnparallax blockquote, .text-parallax blockquote{
+#textbtwnparallax blockquote, .text-images blockquote{
     line-height: 1.5rem;
     font-style: italic;
     font-family: 'Raleway', sans-serif;
@@ -272,14 +333,35 @@ h1, h2{
     line-height: 1.5;
     font-family: 'Cabin', sans-serif;
 }
-#text h3{
-    font-family: 'Cabin Condensed', sans-serif;
+.article {
+clear: both;
+overflow: hidden;
 }
-img.center{
+#articles a{
     display: block;
-    margin left: auto;
-    margin right: auto;
-    padding: 10px;
+    width: max-content;
+    margin: 0 auto;
+}
+.article p{
+    width: 60%;
+    float: left;
+    padding: 1rem 5%;
+}
+.article-photo{
+    width: max-content;
+    padding: 1rem 2%;
+}
+#first .article-photo{
+    float: right;
+}
+#second .article-photo{
+    float: left;
+}
+#second{
+    clear: both;
+}
+#second p{
+    float: right;
 }
 /*
 Footer
@@ -300,7 +382,7 @@ footer aside a, footer aside p{
     padding: 0.5rem 0.74069%;
     line-height: 1.5;
     font-size: 1.25rem;
-    font-family:'Istok Web', sans-serif;;
+    font-family:'Istok Web', sans-serif;
     color: white;
 }
 aside a:hover{
@@ -345,6 +427,7 @@ About the author
     line-height: 1.5;
 }
 .author a{
+    font-size: 0.675rem;
     color: white;
     text-decoration: none;
 }
@@ -374,6 +457,66 @@ About the author
     background-color: white;
 }
 /*
+END
+
+Form Personalization
+
+datepicker/submit: http://codepen.io/maheshambure21/pen/VYJQYG
+
+select: https://codepen.io/ericrasch/pen/zjDBx
+*/
+.styled-select {
+    margin: 0 auto;
+   background: url(images/mini-arrow-select.jpg) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background-color: rgba(255, 255, 255, 0.6);
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+select { color: black}
+.styled-select.slate {
+   background: url(images/mini-arrow-select.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Datepicker and input */
+input {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 7px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px;
+}
+/*
+END
+
 Media Queries
 */
 @media screen and (max-width: 48.63rem){    /*Ipad and tablets*/
